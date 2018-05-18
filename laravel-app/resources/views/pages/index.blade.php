@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     </head>
     <body>
-      <h1>About</h1>
-      <p>This is the amazing about page.</p>
+      <h1>Welcome</h1>
+      <p>Laravel App for learning purposes.</p>
     </body>
 </html>
