@@ -10412,7 +10412,7 @@ a.text-dark:focus {
 }
 
 .container {
-  margin-top: 5%;
+  margin-top: 75px !important;
 }
 
 .navbar-laravel {
