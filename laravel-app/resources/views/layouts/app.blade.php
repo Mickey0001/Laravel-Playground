@@ -12,10 +12,12 @@
     <body>
         @include('inc.navbar')
         <div class="container">
+            @include('inc.messages')
            @yield('content')
         </div>
-        @if(config('app.env') == 'local')
-             <script src="http://localhost:35729/livereload.js"></script>
-        @endif
+        <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+        <script>
+            CKEDITOR.replace( 'article-ckeditor' );
+        </script>
     </body>
 </html>

@@ -3,7 +3,7 @@
       <div class="alert alert-danger">
         {{$error}}
       </div>
-    @endfor
+    @endforeach
 @endif
 
 @if(session('success'))
@@ -12,7 +12,7 @@
       </div>
 @endif
 
-@if(session('success'))
+@if(session('error'))
       <div class="alert alert-danger">
         {{session('error')}}
       </div>
