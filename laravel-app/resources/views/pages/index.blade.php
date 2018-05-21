@@ -1,8 +1,8 @@
 @extends('layouts.app')
 @section('content')
       <div class="jumbotron text-center">
-      <h1>Welcome to my Laravel app!</h1>
-      <p>Just a simple app for learning.</p>
-      <p><a href="" role="button" class="btn btn-primary">Login</a> <a href=""  role="button"  class="btn btn-success">Register</a></p>
+      <h1>Welcome to my blog!</h1>
+      <p>Just a simple blog app for learning Laravel.</p>
+      <p><a href="/login" role="button" class="btn btn-primary">Login</a> <a href="/register"  role="button"  class="btn btn-success">Register</a></p>
       </div>      
 @endsection

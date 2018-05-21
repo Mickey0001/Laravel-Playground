@@ -9,7 +9,7 @@
         <h2><a href="/posts/{{$post->id}}">{{$post->title}}</a></h2>
         </li>
         <li class="list-group-item">
-          <small>Posted on {{$post->created_at}}</small>
+          <small>Posted on {{$post->created_at}} by {{$post->user->name}}</small>
         </li>
         </ul><br>
       @endforeach

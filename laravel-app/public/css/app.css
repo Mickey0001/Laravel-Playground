@@ -10419,6 +10419,10 @@ a.text-dark:focus {
   padding: 10px;
 }
 
+.navbar {
+  margin-top: -75px !important;
+}
+
 .navbar-laravel {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
