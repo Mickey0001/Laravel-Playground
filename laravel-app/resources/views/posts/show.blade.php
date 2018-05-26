@@ -3,6 +3,7 @@
 @section('content')
     <p><button class="btn btn-default"><a href="/posts">Back</a></button><br></p>
       <h2>{{$post->title}}</h2>
+      <img class="img-fluid" src="/storage/cover_images/{{$post->cover_image}}" alt="uploaded image">
       <div>
         {!!$post->body!!}
       </div>

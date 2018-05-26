@@ -10411,6 +10411,10 @@ a.text-dark:focus {
   }
 }
 
+body {
+  margin-bottom: 75px !important;
+}
+
 .container {
   margin-top: 75px !important;
 }
@@ -10421,6 +10425,11 @@ a.text-dark:focus {
 
 .navbar {
   margin-top: -75px !important;
+}
+
+.img-fluid {
+  height: 150px;
+  width: 250px;
 }
 
 .navbar-laravel {
