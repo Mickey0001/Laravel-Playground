@@ -1,2 +1,2 @@
 # Laravel
-Learning Laravel PHP framework
+I made a mini-blog application to practice using Laravel PHP framework.
