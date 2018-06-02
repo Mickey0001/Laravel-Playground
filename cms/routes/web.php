@@ -24,3 +24,13 @@ Route::get('/contact', function () {
     return "About page, this is.";
  });
  
+ Route::get('/post/{id}/{name}', function($id, $name) {
+    return "This is a post with ID:" .$id ." " .$name;
+ });
+
+ Route::get('/admin/posts/example', array('as' => 'admin.home', function() {
+    $url = route('admin.home');
+
+    return "This is the admin URL: " .$url;
+ }));
+
