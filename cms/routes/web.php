@@ -12,5 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+   return view('welcome');
 });
+
+Route::get('/contact', function () {
+    return "Contact le Me.";
+ });
+
+ 
+ Route::get('/about', function () {
+    return "About page, this is.";
+ });
+ 
