@@ -14,7 +14,7 @@ class PostsController extends Controller
     public function index($id)
     {
 
-        return "Working!" .$id;
+        return "The number is: " .$id;
     }
 
     /**
