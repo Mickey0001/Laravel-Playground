@@ -13,7 +13,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -82,3 +82,4 @@ class PostsController extends Controller
         //
     }
 }
+ 
