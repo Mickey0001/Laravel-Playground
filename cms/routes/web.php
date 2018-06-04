@@ -17,9 +17,11 @@ Route::get('/', function () {
 
 // Route::get('/post/{id}', 'PostsController@index');
 
-Route::resource('posts', 'PostsController');
+// Route::resource('posts', 'PostsController');
 
 Route::get('/contact', 'PostsController@contact');
+
+Route::get('post/{id}', 'PostsController@ShowPost');
 
 // Route::get('/contact', function () {
 //     return "Contact le Me.";
