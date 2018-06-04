@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 Route::get('/contact', 'PostsController@contact');
 
-Route::get('post/{id}', 'PostsController@ShowPost');
+Route::get('post/{id}/{name}', 'PostsController@ShowPost');
 
 // Route::get('/contact', function () {
 //     return "Contact le Me.";

@@ -10,6 +10,6 @@
         <!-- Styles --> 
     </head>
     <body>
-    <h1>Post {{$id}}</h1>
+    <h1>Post {{$id}} {{$name}}</h1>
     </body>
 </html>
