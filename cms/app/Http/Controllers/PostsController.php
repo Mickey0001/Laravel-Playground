@@ -24,7 +24,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        //
+        return "Create posts here.";
     }
 
     /**
@@ -46,7 +46,7 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        //
+        return "Test the show method." .$id;
     }
 
     /**
