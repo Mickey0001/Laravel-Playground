@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Route::resource('posts', 'PostsController');
 
-
+Route::get('/contact', 'PostsController@contact');
 
 // Route::get('/contact', function () {
 //     return "Contact le Me.";
