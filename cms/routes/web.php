@@ -1,5 +1,6 @@
 <?php
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,9 +12,14 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function(){
    return view('welcome');
 });
+
+// Route::get('/insert', function(){
+//   DB::insert('insert into posts (title, body) values (?, ?)', ['PHP Laravel', 'Laravel is the best PHP framework!']);
+// });
+
 
 
 
