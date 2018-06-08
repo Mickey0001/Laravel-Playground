@@ -15,13 +15,15 @@ Route::get('/', function () {
    return view('welcome');
 });
 
+
+
 // Route::get('/post/{id}', 'PostsController@index');
 
 // Route::resource('posts', 'PostsController');
 
-Route::get('/contact', 'PostsController@contact');
+// Route::get('/contact', 'PostsController@contact');
 
-Route::get('post/{id}/{name}', 'PostsController@ShowPost');
+// Route::get('post/{id}/{name}', 'PostsController@ShowPost');
 
 // Route::get('/contact', function () {
 //     return "Contact le Me.";
