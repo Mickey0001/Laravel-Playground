@@ -16,9 +16,29 @@ Route::get('/', function(){
    return view('welcome');
 });
 
+// |--------------------------------------------------------------------------
+// | Raw SQL Queries
+// |--------------------------------------------------------------------------
+
 // Route::get('/insert', function(){
-//   DB::insert('insert into posts (title, body) values (?, ?)', ['PHP Laravel', 'Laravel is the best PHP framework!']);
+
+//   DB::insert('insert into posts (title, body, created_at, updated_at) values (?, ?)', ['PHP Laravel', 'Laravel is the best PHP framework!']);
+
 // });
+
+// Route::get('/read', function(){
+
+//    $results = DB::select('select * from posts where id = ?', [1]);
+//       return  dump($results);
+//   //  foreach($results as $post){
+//   //     return $post->body;
+//   //  }
+
+// });
+
+Route::get('/update', function(){
+  
+});
 
 
 
