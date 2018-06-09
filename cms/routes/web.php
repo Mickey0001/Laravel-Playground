@@ -43,7 +43,7 @@ Route::get('/', function(){
 
 Route::get('/delete', function(){
   $deleted = DB::delete('delete from posts where id = ?', [1]);
-  return $deleted;
+  return $deleted; 
 });
 
 
