@@ -1,5 +1,6 @@
 <?php
 
+use App\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +23,7 @@ Route::get('/', function(){
 
 // Route::get('/insert', function(){
 
-//   DB::insert('insert into posts (title, body, created_at, updated_at) values (?, ?)', ['PHP Laravel', 'Laravel is the best PHP framework!']);
+//   DB::insert('insert into posts (title, body, created_at, updated_at) values (?, ?)', ['Laravel rules', 'Laravel is so sexy!']);
 
 // });
 
@@ -74,3 +75,27 @@ Route::get('/', function(){
 //  }));
 
 
+// |--------------------------------------------------------------------------
+// | ELOQUENT
+// |--------------------------------------------------------------------------
+
+// Route::get('/read', function(){
+
+//   $posts = Post::find(2);
+//   return $posts->title;
+
+// });
+
+// Route::get('/find', function(){
+
+//       $post = Post::find(2);
+//       return $post->title;
+
+// });
+
+Route::get('/where', function(){
+
+    $posts = Post::where('id', 2)->orderBy('id', 'desc')->get();
+
+    return $posts;
+});
