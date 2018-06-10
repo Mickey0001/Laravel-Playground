@@ -41,12 +41,10 @@ Route::get('/', function(){
 //   return $updated;
 // });
 
-Route::get('/delete', function(){
-  $deleted = DB::delete('delete from posts where id = ?', [1]);
-  return $deleted; 
-});
-
-
+// Route::get('/delete', function(){
+//   $deleted = DB::delete('delete from posts where id = ?', [1]);
+//   return $deleted; 
+// });
 
 // Route::get('/post/{id}', 'PostsController@index');
 
@@ -74,4 +72,5 @@ Route::get('/delete', function(){
 
 //     return "This is the admin URL: " .$url;
 //  }));
+
 
