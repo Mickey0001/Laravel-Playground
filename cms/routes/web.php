@@ -93,9 +93,31 @@ Route::get('/', function(){
 
 // });
 
-Route::get('/where', function(){
+// Route::get('/where', function(){
 
-    $posts = Post::where('id', 2)->orderBy('id', 'desc')->get();
+//     $posts = Post::where('id', 2)->orderBy('id', 'desc')->get();
 
-    return $posts;
+//     return $posts;
+// });
+
+// Route::get('findmore', function(){
+
+//   $posts = Post::findOrFail(2);
+
+//   return $posts;
+
+//   // $posts = Post::where('users_count', '<, 50')->firstOrFail();
+
+
+// });
+
+Route::get('insert', function(){
+
+      $post = Post::find(1);
+
+      $post->title = 'New Eloquent title.';
+      $post->content = "This is pretty nice.";
+
+      $post->save();
+
 });
