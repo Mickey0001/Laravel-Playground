@@ -111,13 +111,22 @@ Route::get('/', function(){
 
 // });
 
-Route::get('insert', function(){
+// Route::get('insert', function(){
 
-      $post = Post::find(1);
+//       $post = Post::find(1);
 
-      $post->title = 'New Eloquent title.';
-      $post->content = "This is pretty nice.";
+//       $post->title = 'New Eloquent title.';
+//       $post->content = "This is pretty nice.";
 
-      $post->save();
+//       $post->save();
+
+// });
+
+// Route::get('/create', function(){
+//       Post::create(['title'=>'The create method!', 'body'=>'I am learning a lot about Laravel.']);
+// });
+
+Route::get('update', function(){
+      Post::where('id', 3)->where('is_admin', 0)->update(['title'=>'Updated Title', 'body'=>'I still love Laravel']);
 
 });
