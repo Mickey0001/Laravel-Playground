@@ -116,7 +116,7 @@ Route::get('/', function(){
 //       $post = Post::find(1);
 
 //       $post->title = 'New Eloquent title.';
-//       $post->content = "This is pretty nice.";
+//       $post->body = "This is pretty nice.";
 
 //       $post->save();
 
@@ -126,21 +126,24 @@ Route::get('/', function(){
 //       Post::create(['title'=>'The create method!', 'body'=>'I am learning a lot about Laravel.']);
 // });
 
-// Route::get('update', function(){
-//       Post::where('id', 3)->where('is_admin', 0)->update(['title'=>'Updated Title', 'body'=>'I still love Laravel']);
+// // Route::get('update', function(){
+// //       Post::where('id', 3)->where('is_admin', 0)->update(['title'=>'Updated Title', 'body'=>'I still love Laravel']);
+// // });
+
+// // Route::get('/delete', function(){
+// //       $post = Post::find(3);
+
+// //       $post->delete();
+// // });
+
+// // Route::get('/delete2', function(){
+// //       Post::destroy([4,5]);
+// //       // Post::where('is_admin', 0)->delete();
+// // });
+
+// Route::get('/readsoftdelete', function(){
+// //     $post = Post::find(1);
+// //     return $post;
+//       $post = Post::withTrashed()->where('is_admin', 0)->get();
+//       return $post;
 // });
-
-// Route::get('/delete', function(){
-//       $post = Post::find(3);
-
-//       $post->delete();
-// });
-
-// Route::get('/delete2', function(){
-//       Post::destroy([4,5]);
-//       // Post::where('is_admin', 0)->delete();
-// });
-
-Route::get('/softdelete', function(){
-      Post::find(1)->delete();
-});
