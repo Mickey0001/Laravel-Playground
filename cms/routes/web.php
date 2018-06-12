@@ -147,3 +147,9 @@ Route::get('/', function(){
 //       $post = Post::withTrashed()->where('is_admin', 0)->get();
 //       return $post;
 // });
+
+// Route::get('/restore', function(){
+
+//       Post::withTrashed()->where('is_admin', 1)->restore();
+
+// });
