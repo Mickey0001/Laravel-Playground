@@ -130,16 +130,15 @@ Route::get('/', function(){
 // //       Post::where('id', 3)->where('is_admin', 0)->update(['title'=>'Updated Title', 'body'=>'I still love Laravel']);
 // // });
 
-// // Route::get('/delete', function(){
-// //       $post = Post::find(3);
+// Route::get('/delete', function(){
+//       $post = Post::find(8);
+//       $post->delete();
+// });
 
-// //       $post->delete();
-// // });
-
-// // Route::get('/delete2', function(){
-// //       Post::destroy([4,5]);
-// //       // Post::where('is_admin', 0)->delete();
-// // });
+// Route::get('/delete2', function(){
+//       Post::destroy([14,15]);
+//       // Post::where('is_admin', 0)->delete();
+// });
 
 // Route::get('/readsoftdelete', function(){
 // //     $post = Post::find(1);
@@ -149,7 +148,9 @@ Route::get('/', function(){
 // });
 
 // Route::get('/restore', function(){
-
 //       Post::withTrashed()->where('is_admin', 1)->restore();
-
 // });
+
+Route::get('/forcedelete', function(){
+      Post::onlyTrashed()->where('is_admin', 0)->forceDelete();
+});
