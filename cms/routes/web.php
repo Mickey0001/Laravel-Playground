@@ -137,5 +137,7 @@ Route::get('/', function(){
 // });
 
 Route::get('/delete2', function(){
-      Post::destroy(2);
+      Post::destroy([4,5]);
+
+      // Post::where('is_admin', 0)->delete();
 });
