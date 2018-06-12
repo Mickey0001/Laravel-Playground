@@ -151,6 +151,14 @@ Route::get('/', function(){
 //       Post::withTrashed()->where('is_admin', 1)->restore();
 // });
 
-Route::get('/forcedelete', function(){
-      Post::onlyTrashed()->where('is_admin', 0)->forceDelete();
+// Route::get('/forcedelete', function(){
+//       Post::onlyTrashed()->where('is_admin', 0)->forceDelete();
+// });
+
+// |--------------------------------------------------------------------------
+// | ELOQUENT RELATIONSHIPS
+// |--------------------------------------------------------------------------
+
+Route::get('/user/{id}/post', function($id){
+
 });
