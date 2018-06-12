@@ -136,8 +136,11 @@ Route::get('/', function(){
 //       $post->delete();
 // });
 
-Route::get('/delete2', function(){
-      Post::destroy([4,5]);
+// Route::get('/delete2', function(){
+//       Post::destroy([4,5]);
+//       // Post::where('is_admin', 0)->delete();
+// });
 
-      // Post::where('is_admin', 0)->delete();
+Route::get('/softdelete', function(){
+      Post::find(1)->delete();
 });

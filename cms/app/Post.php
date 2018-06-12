@@ -9,7 +9,7 @@ class Post extends Model
 {
     use SoftDeletes;
 
-    // protected $primaryKey = 'id';
+    protected $primaryKey = 'id';
     public $timestamps = false;
     protected $fillable = ['title', 'body'];
 
