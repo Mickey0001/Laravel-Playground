@@ -126,7 +126,16 @@ Route::get('/', function(){
 //       Post::create(['title'=>'The create method!', 'body'=>'I am learning a lot about Laravel.']);
 // });
 
-Route::get('update', function(){
-      Post::where('id', 3)->where('is_admin', 0)->update(['title'=>'Updated Title', 'body'=>'I still love Laravel']);
+// Route::get('update', function(){
+//       Post::where('id', 3)->where('is_admin', 0)->update(['title'=>'Updated Title', 'body'=>'I still love Laravel']);
+// });
 
+// Route::get('/delete', function(){
+//       $post = Post::find(3);
+
+//       $post->delete();
+// });
+
+Route::get('/delete2', function(){
+      Post::destroy(2);
 });
