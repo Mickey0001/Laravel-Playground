@@ -1,7 +1,7 @@
 <?php
 
 use App\Post;
-
+use App\User;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -159,6 +159,7 @@ Route::get('/', function(){
 // | ELOQUENT RELATIONSHIPS
 // |--------------------------------------------------------------------------
 
+//One-to-one relationship
 Route::get('/user/{id}/post', function($id){
-
+      User::find($id)->post->title;
 });
