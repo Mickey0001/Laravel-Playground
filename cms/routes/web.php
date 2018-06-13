@@ -168,10 +168,10 @@ Route::get('/', function(){
 //       return Post::find($id)->user->name;
 // });
 
-Route::get('posts', function(){
-   $user =   User::find(1);
+// Route::get('/posts', function(){
+//    $user =   User::find(1);
 
-   foreach($user->posts as $post) {
-
-   }
-});
+//    foreach($user->posts as $post) {
+//     echo  $post->title;
+//    }
+// });
