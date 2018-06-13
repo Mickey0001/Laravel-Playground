@@ -170,4 +170,8 @@ Route::get('/', function(){
 
 Route::get('posts', function(){
    $user =   User::find(1);
+
+   foreach($user->posts as $post) {
+
+   }
 });
