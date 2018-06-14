@@ -176,10 +176,22 @@ Route::get('/', function(){
 //    }
 // });
 
-Route::get('/users/{id}/role', function($id){
-    $user = User::find($id)->roles()->orderBy('id', 'desc')->get();
-      return $user;
-    // foreach($user->roles as $role){
-    //   echo $role->name;
-    // }
+// Route::get('/users/{id}/role', function($id){
+//     $user = User::find($id)->roles()->orderBy('id', 'desc')->get();
+//       return $user;
+//     // foreach($user->roles as $role){
+//     //   echo $role->name;
+//     // }
+// });
+
+// Route::get('/user/pivot', function(){
+//   return $user = User::find(2);
+
+//   // foreach($user->roles as $role){
+//   //   echo $role->pivot->created_at;
+//   // }
+// });
+
+Route::get('/user/country', function(){
+               
 });

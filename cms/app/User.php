@@ -9,6 +9,7 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    // protected $primaryKey = 'user_id';
     /**
      * The attributes that are mass assignable.
      *
@@ -36,6 +37,8 @@ class User extends Authenticatable
     }
 
     public function roles(){
-        return $this->belongsToMany('App\Role');
+        return $this->belongsToMany('App\Role')->withPivot('create_at');
+        //Customizing table names and columns
+        // return $this->belongsToMany('App\Role', 'role_user', 'user_id', 'role_id');
     }
 }
