@@ -13,7 +13,7 @@ class Post extends Model
     public $timestamps = false;
     protected $fillable = ['title', 'body'];
 
-    protected $dates = ['deleted_at'];
+    // protected $dates = ['deleted_at'];
 
     public function user(){
         return $this->belongsTo('App\User');

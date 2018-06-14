@@ -228,9 +228,6 @@ Route::get('/', function(){
 // });
 
 Route::get('tag/post', function(){
-  $tag = Tag::find(1);
+  return $tag = Tag::find(2);
 
-  foreach($tag->posts as $post){
-    echo $post->title;
-  }
 });
