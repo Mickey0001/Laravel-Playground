@@ -175,3 +175,11 @@ Route::get('/', function(){
 //     echo  $post->title;
 //    }
 // });
+
+Route::get('/users/{id}/role', function($id){
+    $user = User::find($id)->roles()->orderBy('id', 'desc')->get();
+      return $user;
+    // foreach($user->roles as $role){
+    //   echo $role->name;
+    // }
+});
