@@ -4,6 +4,9 @@ use App\Country;
 use App\Post;
 use App\User;
 use App\Photo;
+use App\Video;
+use App\Tag;
+use App\Taggable;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -210,7 +213,24 @@ Route::get('/', function(){
 //   }
 // });
 
-Route::get('photo/{id}/post', function($id){
-   $photo = Photo::findOrFail($id);
-    return $photo->imageable;
+// Route::get('photo/{id}/post', function($id){
+//    $photo = Photo::findOrFail($id);
+//     return $photo->imageable;
+// });
+
+// //Polymorphic Many to Many
+// Route::get('video/tag', function(){
+//   $video = Video::find(1);
+
+//   foreach($video->$tags as $tag){
+//     echo $tag->name;
+//   }
+// });
+
+Route::get('tag/post', function(){
+  $tag = Tag::find(1);
+
+  foreach($tag->posts as $post){
+    echo $post->title;
+  }
 });
