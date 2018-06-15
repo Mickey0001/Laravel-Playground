@@ -229,5 +229,4 @@ Route::get('/', function(){
 
 Route::get('tag/post', function(){
   return $tag = Tag::find(2);
-
 });
