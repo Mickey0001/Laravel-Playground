@@ -218,7 +218,7 @@ Route::get('/', function(){
 //     return $photo->imageable;
 // });
 
-// //Polymorphic Many to Many
+// //Polymorphic Many to Manym
 // Route::get('video/tag', function(){
 //   $video = Video::find(1);
 
