@@ -21,5 +21,7 @@ Route::get('/', function () {
 Route::get('/insert', function(){
     $user = User::findOrFail(1);
 
-    $address = new Address();
+    $address = new Address(['name'=>'69 Street, 71000 Sarajevo, BA']);
+
+    $user->address()->save($address);
 });
