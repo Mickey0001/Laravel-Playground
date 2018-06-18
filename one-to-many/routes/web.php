@@ -1,5 +1,8 @@
 <?php
 
+use App\Post;
+use App\User;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,4 +16,13 @@
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/create', function(){
+
+    $user = User::findOrFail(1);
+
+    $post = new Post(['title'=>'My New Post', 'body'=>'Laravel is my biach']);
+
+    $user->save(1);
 });
