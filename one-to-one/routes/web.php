@@ -36,7 +36,7 @@ Route::get('/update', function(){
 });
 
 Route::get('read', function(){
-    $user = User::findOrFail(1);
+    $user = User::findOrFail(1); 
 
     echo $user->address->name;
 });
