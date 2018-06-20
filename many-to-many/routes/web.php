@@ -65,3 +65,9 @@ Route::get('detach', function(){
 
     $user->roles()->detach(1);
 });
+
+Route::get('sync', function(){
+    $user = User::findOrFail(1);
+
+    $user->roles()->sync([6,7]);
+});
