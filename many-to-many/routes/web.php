@@ -53,3 +53,9 @@ Route::get('/delete', function(){
         $role->whereId(2)->delete();
     }
 });
+
+Route::get('attach', function(){
+    $user = User::findOrFail(1);
+
+    $user->roles->attach(2);
+});
