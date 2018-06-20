@@ -57,5 +57,11 @@ Route::get('/delete', function(){
 Route::get('attach', function(){
     $user = User::findOrFail(1);
 
-    $user->roles->attach(2);
+    $user->roles()->attach(4);
+});
+
+Route::get('detach', function(){
+    $user = User::findOrFail(1);
+
+    $user->roles()->detach(1);
 });
