@@ -31,3 +31,33 @@ Route::get('read', function () {
         return $photo->path;
    }
 });
+
+Route::get('update', function () {
+    $staff = Staff::findOrFail(1);
+
+    $photo = $staff->photos()->whereId(1)->first();
+
+    $photo->path = "Updated example.jpg";
+
+    $photo->save();
+ });
+
+ Route::get('delete', function(){
+    $staff = Staff::findOrFail(1);
+
+    $staff->photos()->delete();
+ });
+
+ Route::get('assign', function(){
+    $staff = Staff::findOrFail(1);
+
+    $photo = Photo::findOrFail(3);
+
+    $staff->photos()->save($photo);
+ });
+
+ Route::get('unassign', function(){
+    $staff = Staff::findOrFail(1);
+
+    $staff->photos()->where(1)->update(['imageable_id'=>'', 'imageable_type'=>'']);
+ });
