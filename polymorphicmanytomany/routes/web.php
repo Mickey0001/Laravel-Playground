@@ -32,4 +32,34 @@ Route::get('create', function () {
     $video->tags()->save($tag2);
 });
 
+Route::get('read', function () {
+    $post = Post::findOrFail(3);
+
+    // return $post;
+    foreach($post->tags as $tag){
+        echo $tag;
+    }
+});
+
+Route::get('update', function () {
+
+    // $post = Post::findOrFail(2);
+
+    // foreach($post->tags as $tag){
+    //     return $tag->whereName('JAVA')->update(['name'=>'JavaScript']);
+    // }
+
+    $post = Post::findOrFail(1);
+    $tag = Tag::find(2);
+
+    // $post->tags()->save($tag);
+    // $post->tags()->sync(1);
+
+    $post->tags()->sync([1,2]);
+
+
+});
+
+
+
 
