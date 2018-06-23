@@ -1,5 +1,7 @@
 <?php
 
+use App\Posts;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,4 +23,5 @@ Route::get('/', function () {
 | CRUD Application
 |--------------------------------------------------------------------------
 */
-Route::get('post', 'PostsController');
+
+Route::get('poss','App\PostsController');
