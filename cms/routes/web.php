@@ -25,4 +25,4 @@ Route::get('/', function () {
 |--------------------------------------------------------------------------
 */
 
-Route::get('posts','App\PostsController@index');
+Route::get('posts','App\PostController@index');
