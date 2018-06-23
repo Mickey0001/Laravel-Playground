@@ -6,5 +6,4 @@
     <input type="text" name="title" placeholder="Enter Title">
     <input type="submit" name="submit">
   </form>
-
-@yield('footer')
+@endsection

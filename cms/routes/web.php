@@ -1,7 +1,7 @@
 <?php
 
 use App\Posts;
-namespace App\Http\Controllers;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +25,4 @@ Route::get('/', function () {
 |--------------------------------------------------------------------------
 */
 
-Route::get('post','App\PostsController@index');
+Route::get('posts','App\PostsController@index');
