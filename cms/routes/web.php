@@ -25,4 +25,7 @@ Route::get('/', function () {
 |--------------------------------------------------------------------------
 */
 
-Route::get('posts','App\PostController@index');
+//Middleware for security
+Route::group(['middleware'=>'web',], function(){
+    Route::resource('posts','App\PostController@index');
+});
