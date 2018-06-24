@@ -28,4 +28,10 @@ Route::get('/', function () {
 //Middleware for security
 Route::group(['middleware'=>'web',], function(){
     Route::resource('posts','App\PostController@index');
+
+    Route::get('dates', function(){
+        $date = new DateTime('+ week');
+
+        echo $date->format('m-d-y');
+    });
 });
