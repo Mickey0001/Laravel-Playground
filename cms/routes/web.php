@@ -33,5 +33,19 @@ Route::group(['middleware'=>'web',], function(){
         $date = new DateTime('+ week');
 
         echo $date->format('m-d-y');
+
+        echo '<br>';
+
+        echo Carbon::now()->subMonths(5)->diffForHumans();
+
+        echo '<br>';
+
+        echo Carbon::now()->yesterday();
+    });
+
+    Route::get('getname', function(){
+        $user = User::find(1);
+
+        echo $user->name;
     });
 });
