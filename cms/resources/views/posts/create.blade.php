@@ -3,7 +3,11 @@
 @section('content')
 
   <h1>Create Post</h1>
-  {!! Form::open{['method'=>'Post', 'action'=>'PostsController@store']} !!}
+  {!! Form::open{['method'=>'Post', 'action'=>'PostsController@store', 'files'=>true]} !!}
+
+<div class="form-gruop">
+  {{!! Form::file('file', ['class'=>'form-control']) !!}}
+</div>
 
 <div class="form-group">
   {{!! Form::label('title', 'Title:') !!}}
