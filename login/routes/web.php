@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,6 +15,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+// if(Auth::check()){
+//     return "The user is logged in.";
+// }
+    // $email = 'test@test.com';
+    // $password = '123';
+
+    // if(Auth::attempt(['email'=>$email, 'password'=>$password])){
+    //     return redirect()->intended();
+    // }
 
 Auth::routes();
 
