@@ -26,18 +26,4 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-
-    public function photos(){
-        return $this->morphToMany('App\Photo', 'imageable');
-    }
-    
-    public function getNameAttribute($value){
-        return strtoupper($value);
-    }
-
-    public function setNameAttribute($value){
-        $this->attributes['name'] = strtoupper($value);
-    }
-    
 }
-
