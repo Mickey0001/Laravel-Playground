@@ -13,7 +13,14 @@
 
 Route::get('/', function () {
     return view('welcome');
+    
+$user = Auth::user();
+
+if($user->IsAdmin()){
+    echo "user is admin";
+}
 });
+
 
 Route::auth();
 
@@ -22,3 +29,7 @@ Route::get('/home', 'HomeController@index');
 Route::get('/admin/user/roles', ['middleware'=>'role', function(){
     return "Middleware role";
 }]);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
