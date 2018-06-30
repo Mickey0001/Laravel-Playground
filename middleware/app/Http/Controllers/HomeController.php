@@ -21,8 +21,11 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        // $request->session(['mirza'=>'student']);
+
+        $request->session()->get('mirza');
         return view('home');
     }
 }
