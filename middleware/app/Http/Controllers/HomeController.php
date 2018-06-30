@@ -32,8 +32,10 @@ class HomeController extends Controller
         // // $request->session()->get('mirza');
         // // return view('home');
 
-        $request->session()->flash('message', 'Post Create');
+        // $request->session()->flash('message', 'Post Create');
 
-        return $request->session()->get('message');
+        // return $request->session()->get('message');
+
+        $request->session()->reflash();
     }
 }
