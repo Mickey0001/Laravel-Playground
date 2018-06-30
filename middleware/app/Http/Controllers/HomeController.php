@@ -23,11 +23,17 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        // $request->session->put(['mirza'=>'student']);
-        session(['mirza'=>'student']);
+        // // $request->session->put(['mirza'=>'student']);
+        // session(['mirza'=>'student']);
 
-        $request->session()->all();
-        // $request->session()->get('mirza');
-        // return view('home');
+        // return session('mirza');
+
+        // // $request->session()->all();
+        // // $request->session()->get('mirza');
+        // // return view('home');
+
+        $request->session()->flash('message', 'Post Create');
+
+        return $request->session()->get('message');
     }
 }
