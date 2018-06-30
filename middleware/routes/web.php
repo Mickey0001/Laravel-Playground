@@ -33,3 +33,5 @@ Route::get('/admin/user/roles', ['middleware'=>'role', function(){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/admin', 'AdminController@index');
