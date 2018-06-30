@@ -23,9 +23,11 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        // $request->session(['mirza'=>'student']);
+        // $request->session->put(['mirza'=>'student']);
+        session(['mirza'=>'student']);
 
-        $request->session()->get('mirza');
-        return view('home');
+        $request->session()->all();
+        // $request->session()->get('mirza');
+        // return view('home');
     }
 }
