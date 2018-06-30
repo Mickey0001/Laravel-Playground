@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class RoleMiddleware
+class IsAdmin
 {
     /**
      * Handle an incoming request.
@@ -15,9 +15,6 @@ class RoleMiddleware
      */
     public function handle($request, Closure $next)
     {
-        
-        
-        
         return $next($request);
     }
 }
