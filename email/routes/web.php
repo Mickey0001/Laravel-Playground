@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Mail;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
+Route::get('/email', function () {
     $data = [
         'title'=> 'Hello to myself',
         'content'=> 'Sending email from Laravel, usign MailGun'
