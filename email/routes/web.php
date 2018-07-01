@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Mail;
 */
 Route::get('/', function () {
     $data = [
-        'title'=> 'Hi there',
-        'content'=> 'Email test'
+        'title'=> 'Hello to myself',
+        'content'=> 'Sending email from Laravel, usign MailGun'
     ];
     Mail::send('emails.test', $data, function($message){
       $message->to('mirzasisic57@gmail.com', 'Mirza')->subject('Hello');
