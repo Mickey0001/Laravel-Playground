@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Mail;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,5 +14,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+   $data = [
+       'title'=> 'Hi there',
+       'content'=> 'Email test'
+   ];
+   Mail::send();
 });
