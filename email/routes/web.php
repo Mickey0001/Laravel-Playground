@@ -12,11 +12,12 @@ use Illuminate\Support\Facades\Mail;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
-   $data = [
-       'title'=> 'Hi there',
-       'content'=> 'Email test'
-   ];
-   Mail::send();
-});
+    $data = [
+        'title'=> 'Hi there',
+        'content'=> 'Email test'
+    ];
+    Mail::send('emails.test', $data, function($message){
+      $message->to('mirzasisic57@gmail.com', 'Mirza')->subject('Hello');
+    });
+ });
