@@ -14,16 +14,3 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/about', function () {
-    $tasks = DB::table('tasks')->get();
-    return view('about', compact('tasks'));
-});
-
-
-Route::get('/tasks/{task}', function () {
-
-    $tasks = DB::table('tasks')->get();
-
-    return view('about', compact('tasks'));
-});
