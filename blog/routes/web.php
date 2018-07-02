@@ -2,20 +2,8 @@
 
 use App\Task;
 
-Route::get('/tasks', function () {
+Route::get('tasks', 'TasksController@index');
 
-    $tasks = Task::all();
+Route::get('tasks/{task}', 'TasksController@show');
 
-    return view('tasks.index', compact('tasks'));
-});
-
-
-
-Route::get('/tasks/{task}', function ($id) {
-
-    $task = Task::find($id);
-
-
-    return view('tasks.show', compact('tasks'));
-});
 
