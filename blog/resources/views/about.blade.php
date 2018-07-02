@@ -9,7 +9,9 @@
 <body>
     <ul>
        @foreach ($tasks as $task)
-            <li>{{$task}}</li>
+
+          <li> {{$task}->body}} </li>
+
         @endforeach
     </ul>
 </body>

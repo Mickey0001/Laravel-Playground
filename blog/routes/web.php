@@ -16,11 +16,14 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
-    $tasks = [
-        'Go to granap',
-        'Clean the room',
-        'Go to sleep'
-    ];
-    return view('about');
+    $tasks = DB::table('tasks')->get();
+    return view('about', compact('tasks'));
 });
 
+
+Route::get('/tasks/{task}', function () {
+
+    $tasks = DB::table('tasks')->get();
+
+    return view('about', compact('tasks'));
+});
