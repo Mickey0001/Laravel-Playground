@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Task extends Model
 {
-    public static function incomplete()
+    public  function scopeIncomplete($query)
     {
-        return static::where('complete', 0)->get();
+        return $query->where('complete', 0);
     }
 }
