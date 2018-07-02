@@ -16,6 +16,11 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
+    $tasks = [
+        'Go to granap',
+        'Clean the room',
+        'Go to sleep'
+    ];
     return view('about');
 });
 
