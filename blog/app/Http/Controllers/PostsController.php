@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Post;
+
 class PostsController extends Controller
 {
     public function index()
@@ -23,11 +25,25 @@ class PostsController extends Controller
 
     public function store()
     {
-        dd(request(['title', 'content']));
-        //Create a new post
+    
+        // //Create a new post
+        // $post = new Post;
 
-        //Save to DB
+        // $post->title   = request('title');
+        // $post->body = request('body');
+
+        // //Save to DB
+        // $post->save();
+
+        // Post::create([
+        //     'title' => request('title'),
+        //     'body'  => request('body')
+        // ]);
+
+        Post::create(request()->all());
+
 
         //Redirect to home
+        return redirect('/');
     }
 }

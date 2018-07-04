@@ -13,8 +13,8 @@
       </div>
 
       <div class="form-group">
-        <label for="content">Content</label>
-        <input type="text" class="form-control" name="content" id="content" aria-describedby="content">
+        <label for="body">Content</label>
+        <input type="text" class="form-control" name="body" id="body" aria-describedby="body">
       </div>
 
       <button type="submit" class="btn btn-primary">Publish</button>
