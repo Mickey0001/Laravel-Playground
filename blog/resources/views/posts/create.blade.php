@@ -1,13 +1,7 @@
 @extends('layout')
 
 @section('content')
-
-@section('header')
-
-
-@endsection
-
-
-@section('footer')
-  Footer
-@endsection
+<div class="container">
+  <h2>Create Post</h2>
+</div>
+@endsection()

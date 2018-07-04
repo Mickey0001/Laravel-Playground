@@ -3,6 +3,5 @@
 @include('partials.nav')
 @include('partials.header')
 
-@include('posts.main')
+@include('partials.main')
 @include('partials.footer')
-

@@ -3,6 +3,6 @@
 @include('partials.nav')
 @include('partials.header')
 
-@include('partials.main')
+  @yield('content')
 @include('partials.footer')
 
