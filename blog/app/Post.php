@@ -6,5 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    protected $fillable = ['title', 'body'];
+    // //Whitelisted input fields
+    // protected $fillable = ['title', 'body'];
+
+    // //Blacklisted input fields 
+    // protected $guarded = ['title', 'body'];
 }
