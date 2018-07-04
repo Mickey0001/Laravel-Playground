@@ -1,7 +1,6 @@
-@include('partials.head')
 
-@include('partials.nav')
 @include('partials.header')
 
-@include('partials.main')
+  @yield('partials.main')
+
 @include('partials.footer')
