@@ -40,8 +40,9 @@ class PostsController extends Controller
         //     'body'  => request('body')
         // ]);
 
-        Post::create(request()->all());
+        // Post::create(request()->all());
 
+        Post::create(request(['title', 'body']));
 
         //Redirect to home
         return redirect('/');
