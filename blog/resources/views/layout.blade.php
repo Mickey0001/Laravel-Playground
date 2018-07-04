@@ -1,15 +1,8 @@
-
 @include('partials.head')
 
-  <body>
+@include('partials.nav')
+@include('partials.header')
 
-    @include('partials.nav')
-
-    <div class="container">
-
-      @yield('content')
-      
-    </div>
-
-    @include('partials.footer')
+@include('partials.main')
+@include('partials.footer')
 

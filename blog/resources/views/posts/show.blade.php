@@ -1,7 +1,8 @@
-@extends('layout')
+@include('partials.head')
 
-@section('content')
- 
-  <h1>Place to show the posts</h1>
+@include('partials.nav')
+@include('partials.header')
 
-@endsection
+@include('posts.main')
+@include('partials.footer')
+
