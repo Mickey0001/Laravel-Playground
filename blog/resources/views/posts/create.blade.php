@@ -17,7 +17,13 @@
         <input type="text" class="form-control" name="body" id="body" aria-describedby="body">
       </div>
 
-      <button type="submit" class="btn btn-primary">Publish</button>
+      <div class="form-group">
+          <button type="submit" class="btn btn-primary">Publish</button>
+      </div>
+
+      @include('partials.errors')
     </form>
+
+ 
   </div>
 @endsection()
