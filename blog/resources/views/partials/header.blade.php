@@ -7,10 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-
-    <title>Blog Template for Bootstrap</title>
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/blog/">
-
+    <title>Blog</title>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -24,11 +21,8 @@
   <div class="blog-masthead">
     <div class="container">
       <nav class="nav blog-nav">
-        <a class="nav-link active" href="#">Home</a>
-        <a class="nav-link" href="#">New features</a>
-        <a class="nav-link" href="#">Press</a>
-        <a class="nav-link" href="#">New hires</a>
-        <a class="nav-link" href="#">About</a>
+        <a class="nav-link active" href="/">Home</a>
+        <a class="nav-link" href="/posts/create">New Post</a>
       </nav>
     </div>
   </div>
