@@ -1,6 +1,6 @@
 
 @include('partials.header')
 
-  @yield('partials.main')
+@include('partials.main')
 
 @include('partials.footer')
