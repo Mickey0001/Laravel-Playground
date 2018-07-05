@@ -1,6 +1,19 @@
+@extends('layout')
 
-@include('partials.header')
+@section('content')
 
-@include('partials.main')
+<div class="container">
+    <h1>
+          
+        {{ $post->title }}
+      
+    </h1>
 
-@include('partials.footer')
+    <p>
+
+        {{ $post->body}}
+      
+    </p>
+</div>
+
+@endsection
