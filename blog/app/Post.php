@@ -2,8 +2,6 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
-
 class Post extends Model
 {
     // //Whitelisted input fields
@@ -11,4 +9,9 @@ class Post extends Model
 
     // //Blacklisted input fields 
     // protected $guarded = ['title', 'body'];
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }
