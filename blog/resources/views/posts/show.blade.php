@@ -39,11 +39,15 @@
     </div>
 
     <div class="card">
-        <div class="card-block">
-        <form method="POST" action="/posts/{{ $post->/comments }}">
-                <div class="form-group">
-                    <textarea name="body" id="body" placeholder="Add your comment" class="form-control"></textarea>
-                </div>
+        <div class="card-body">
+        <form method="POST" action="/posts/{{ $post->id }}/comments ">
+                
+            {{ csrf_field() }}
+
+            <div class="form-group">
+                    <label for="body">Comment:</label>
+                    <textarea name="body" class="form-control" rows="5" id="comment"></textarea>
+                  </div>
 
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">Add Comment</button>
