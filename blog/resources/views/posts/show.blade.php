@@ -46,13 +46,14 @@
 
             <div class="form-group">
                     <label for="body">Comment:</label>
-                    <textarea name="body" class="form-control" rows="5" id="comment"></textarea>
+                    <textarea name="body" class="form-control" rows="5" id="comment" required></textarea>
                   </div>
 
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">Add Comment</button>
                 </div>
             </form>
+            @include('partials.errors')
         </div>
     </div>
 
