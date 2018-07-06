@@ -25,7 +25,7 @@
 
                     <strong>
 
-                            {{ Carbon\Carbon::parse($comment->created_at)->diffForHumans() }}
+                            {{ Carbon\Carbon::parse($comment->created_at)->diffForHumans() }}: 
 
                     </strong>
 
@@ -36,6 +36,20 @@
 
         </ul>
 <br>
+    </div>
+
+    <div class="card">
+        <div class="card-block">
+        <form method="POST" action="/posts/{{ $post->/comments }}">
+                <div class="form-group">
+                    <textarea name="body" id="body" placeholder="Add your comment" class="form-control"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Add Comment</button>
+                </div>
+            </form>
+        </div>
     </div>
 
 </div>
