@@ -17,10 +17,29 @@ class RegistrationController extends Controller
     {
         //Validte the input
 
+        $this->validate(request(), [
+
+            'name' => 'name',
+
+            'email' => 'email',
+
+            'password' => 'password'
+
+        ]);
+
         //Create and store the user
+
+        User::create(request(['name', 'email', 'password']));
 
         //Log them in
 
-        //Redireac to home
+        // \Auth::login();
+
+        auth()->login($user);
+;
+        //Redirect to home
+
+        return redirect()->home();
+
     }
 }
