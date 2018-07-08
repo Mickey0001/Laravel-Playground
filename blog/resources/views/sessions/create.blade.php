@@ -35,10 +35,24 @@
       </div>
 
       <div class="form-group">
+
+        <label for="password_confirmation">Password Confirmation:</label>
+
+        <input type="password" class="form-control" id="password_confirmation" name="password_confirmation">
+        
+     </div>
+
+      <div class="form-group">
   
           <input type="submit" class="btn btn-primary" id="submit" name="submit">
           
     </div>
+
+    <div class="form-group">
+  
+        @include('partials.errors')
+        
+     </div>
 
 
     </form>
