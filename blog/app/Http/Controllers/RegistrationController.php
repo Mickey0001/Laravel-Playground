@@ -22,28 +22,21 @@ class RegistrationController extends Controller
 
         $this->validate(request(), [
 
-            'name' => 'name',
+            'name' => 'required',
 
-            'email' => 'email',
+            'email' => 'required|email',
 
-            'password' => 'password'
+            'password' => 'required|confirmed'
 
         ]);
 
         //Create and store the user
 
-        User::create(request(['name', 'email', 'password']));
+        $user = User::create(request(['name', 'email', 'password']));
 
-        //Log them in
+        //Log the user in
 
-        // \Auth::login();
-        dd(auth()->id())
-
-        // Auth::user()->id
-;
-        //Redirect to home
-
-        return redirect()->home();
-
+        auth()->login($user);
+    
     }
 }

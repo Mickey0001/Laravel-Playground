@@ -12,7 +12,7 @@ Route::get('posts/{post}', 'PostsController@show');
 
 Route::post('posts/{post}/comments', 'CommentsController@store');
 
-Route::get('register', 'RegistrationController@store');
+Route::post('register', 'RegistrationController@create');
 
 Route::get('login', 'SessionsController@create');
 
