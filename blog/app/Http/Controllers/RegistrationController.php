@@ -8,6 +8,9 @@ use App\User;
 
 class RegistrationController extends Controller
 {
+
+    protected $fillable = array('name', 'email', 'password');
+
     public function create()
     {
         return view('sessions.create');
@@ -34,8 +37,9 @@ class RegistrationController extends Controller
         //Log them in
 
         // \Auth::login();
+        dd(auth()->id())
 
-        auth()->login($user);
+        // Auth::user()->id
 ;
         //Redirect to home
 
