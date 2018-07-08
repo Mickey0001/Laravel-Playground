@@ -13,7 +13,7 @@ class RegistrationController extends Controller
 
     public function create()
     {
-        return view('sessions.create');
+        return view('registration.create');
     }
 
     public function store()
@@ -37,6 +37,8 @@ class RegistrationController extends Controller
         //Log the user in
 
         auth()->login($user);
+
+        return redirect()->home();
     
     }
 }
