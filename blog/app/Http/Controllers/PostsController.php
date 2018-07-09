@@ -23,7 +23,9 @@ class PostsController extends Controller
     public function index()
 
     {
-        $posts = Post::latest()->filter(request(['month', 'year']))->get();
+        $posts = Post::latest()
+        ->filter(request()->only(['month', 'year']))
+        ->get();
 
 
         $archives = Post::archives();

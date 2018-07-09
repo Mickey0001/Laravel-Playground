@@ -17,7 +17,7 @@
 
     </div><!-- /.blog-main -->
 
-      @include('partial.sidebar')
+      @include('partials.sidebar')
 
   </div><!-- /.row -->
 
