@@ -32,6 +32,8 @@
             
       </div>
 
+      @include('partials.errors')
+
     </form>
 
   </div>

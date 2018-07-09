@@ -57,8 +57,8 @@ class PostsController extends Controller
         auth()->user()->publish(new Post(request(['title', 'body'])));
 
         Post::create([
-            'title' => requested('title'),
-            'body' => requested('body'),
+            'title' => request('title'),
+            'body' => request('body'),
             'user_id' => auth()->id()
             ]);
 

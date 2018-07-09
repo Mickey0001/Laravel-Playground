@@ -9,7 +9,7 @@ class SessionsController extends Controller
     public function __constructor()
 
     {
-        $this->middleware('guest');
+        $this->middleware('guest', ['except' => 'destroy']);
     }
 
     public function create()
@@ -26,7 +26,10 @@ class SessionsController extends Controller
 
         if (! auth()->attempt(request(['email', 'password']))) {
 
-            return back();
+            return back()->withErrors([
+
+                'message' => 'Check your credentials please.'
+            ]);
         }
 
         //Return to home page
