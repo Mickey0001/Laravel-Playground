@@ -9,7 +9,7 @@
 
     <div class="col-md-6">
       <h3>Register</h3>
-      <form action="#" method="POST">
+    <form action="{{ route('signup') }}" method="POST">
 
           <div class="form-group">
             <label for="email">Email:</label>
@@ -27,6 +27,7 @@
           </div>
 
           <button class="btn btn-basic" type="submit">Register</button>
+        <input type="hidden" name="_token" value="{{ Session::token() }}">
       </form>
     </div>
 

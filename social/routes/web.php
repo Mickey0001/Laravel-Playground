@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/signup', [
+    'uses' => 'UserController@postSignUp',
+    'as'   =>'signup'
+]);
