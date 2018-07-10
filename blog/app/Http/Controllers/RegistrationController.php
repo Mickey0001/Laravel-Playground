@@ -38,6 +38,8 @@ class RegistrationController extends Controller
 
         auth()->login($user);
 
+        \Mail::to($user)->send(new Email);
+
         return redirect()->home();
     
     }
