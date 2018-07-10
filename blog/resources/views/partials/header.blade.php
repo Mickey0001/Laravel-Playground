@@ -30,24 +30,6 @@
     </div>
   </div>
 
-  @if ($flash = session('message'))
-
-  <div class="row">
-
-    <div class="alert alert-success"  role="alert">
-
-      <div class="text-center">
-
-        {{ $flash }}
-        
-      </div>
-
-  </div>
-
-  </div>
-  
-  @endif
-
   <div class="blog-header">
     <div class="container">
       <h1 class="blog-title">The Bootstrap Blog</h1>
