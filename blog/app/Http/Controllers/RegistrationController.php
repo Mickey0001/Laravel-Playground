@@ -14,33 +14,17 @@ class RegistrationController extends Controller
     protected $fillable = array('name', 'email', 'password');
 
     public function create()
+
     {
         return view('registration.create');
     }
 
-    public function store()
+    public function store(RegistrationForm $form)
+
     {
-        //Validte the input
+        $form->persist();
 
-        $this->validate(request(), [
-
-            'name' => 'required',
-
-            'email' => 'required|email',
-
-            'password' => 'required|confirmed'
-
-        ]);
-
-        //Create and store the user
-
-        $user = User::create(request(['name', 'email', 'password']));
-
-        //Log the user in
-
-        auth()->login($user);
-
-        \Mail::to($user)->send(new Welcome($user));
+        session()->flash('message', 'Thanks for registering.');
 
         return redirect()->home();
     

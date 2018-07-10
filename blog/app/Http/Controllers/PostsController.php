@@ -25,6 +25,8 @@ class PostsController extends Controller
     public function index(Posts $posts)
 
     {
+        return session('message');
+
         $posts = $posts->all();
         
         // $posts = Post::latest()
