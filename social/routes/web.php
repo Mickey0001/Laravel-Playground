@@ -19,3 +19,7 @@ Route::get('/signup', [
     'uses' => 'UserController@postSignUp',
     'as'   =>'signup'
 ]);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
