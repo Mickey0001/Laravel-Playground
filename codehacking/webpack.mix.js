@@ -16,8 +16,7 @@ mix.scripts([
     'resources/assets/js/libs/jquery.js',
     'resources/assets/js/libs/bootstrap.js',
     'resources/assets/js/libs/metisMenu.js',
-    'resources/assets/js/sb-admin-2.js',
-    'resources/assets/js/libs/jquery.js',
+    'resources/assets/js/libs/sb-admin-2.js',
     'resources/assets/js/libs/scripts.js'
 
 ], 'public/js/libs.js');
