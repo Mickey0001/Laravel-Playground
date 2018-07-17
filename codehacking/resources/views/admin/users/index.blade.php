@@ -27,9 +27,9 @@
 
             <td>{{ $user->email }}</td>
 
-            <td>{{ $user->created_at }}</td>
+            <td>{{ $user->created_at->difFforHumans() }}</td>
 
-            <td>{{ $user->updated_at }}</td>
+            <td>{{ $user->updated_at->difFforHumans() }}</td>
         </tr>
 
       @endforeach
