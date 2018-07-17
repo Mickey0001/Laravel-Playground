@@ -8,8 +8,10 @@
   <thead>
     <tr>
       <th>ID</th>
-      <th>Name</th>
+      <th>Name</th> 
       <th>Email</th>
+      <th>Role</th>
+      <th>Active</th>
       <th>Created</th>
       <th>Updated</th>
     </tr>
@@ -26,6 +28,10 @@
             <td>{{ $user->name }}</td>
 
             <td>{{ $user->email }}</td>
+
+            <td>{{ $user->role->name }}</td>
+
+            <td>{{ $user->is_active == 1 ? 'Yes' : 'No' }}</td>
 
             <td>{{ $user->created_at->difFforHumans() }}</td>
 
