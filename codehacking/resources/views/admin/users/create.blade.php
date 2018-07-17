@@ -3,12 +3,12 @@
 @section('content')
 
   <h1>Create Users</h1>
-
-  {!! Form::open(['method'=>'POST', 'action'=>'PostsController@store']) !!}
+{{-- 
+  {!! Form::open(['method'=>'POST', 'action'=>'AdminUsersController@store']) !!}
 
   <div class="form-group">
     {!! Form::label('title', 'Title') !!}
-    {!! Form::label('title', null, ['class'=>'form-control']) !!}
+    {!! Form::text('title', null, ['class'=>'form-control']) !!}
   </div>
 
   <div class="form-group">
@@ -16,6 +16,6 @@
   </div>
 
 
-  {!! Form::close() !!}
+  {!! Form::close() !!} --}}
 
 @endsection
