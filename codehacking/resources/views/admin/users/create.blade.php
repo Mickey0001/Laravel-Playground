@@ -32,10 +32,12 @@
     </div>
 
     <div class="form-group">
-      {!! Form::submit('Create User', ['class'=>'btn-primary']) !!}
+      {!! Form::submit('Create User', ['class'=>'btn btn-primary']) !!}
     </div>
 
 
   {!! Form::close() !!}
+
+  @include('errors.error')
 
 @endsection
