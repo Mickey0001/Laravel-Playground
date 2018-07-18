@@ -4,7 +4,7 @@
 
   <h1>Edit User</h1>
 
-    {!! Form::model(['method'=>'POST', 'action'=>'AdminUsersController@store', 'files'=>true]) !!}
+    {!! Form::model($user ['method'=>'POST', 'action'=>'AdminUsersController@store', 'files'=>true]) !!}
 
     <div class="form-group">
       {!! Form::label('name', 'Name:') !!}
