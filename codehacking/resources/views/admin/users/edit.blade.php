@@ -4,7 +4,7 @@
 
   <h1>Edit User</h1>
 
-    {!! Form::model($user ['method'=>'POST', 'action'=>'AdminUsersController@store', 'files'=>true]) !!}
+    {!! Form::model($user, ['method'=>'PATCH', 'action'=>['AdminUsersController@update', $user->id], 'files'=>true]) !!}
 
     <div class="form-group">
       {!! Form::label('name', 'Name:') !!}
@@ -18,7 +18,7 @@
 
     <div class="form-group">
       {!! Form::label('role_id', 'Role:') !!}
-      {!! Form::select('role_id', [''=>'Choose Role'] + $roles, null, ['class'=>'form-control']) !!}
+      {!! Form::select('role_id', $roles, null, ['class'=>'form-control']) !!}
     </div>
 
     <div class="form-group">

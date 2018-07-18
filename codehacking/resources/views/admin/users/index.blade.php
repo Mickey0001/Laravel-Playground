@@ -28,7 +28,7 @@
 
             <td><img height="50px" width="50px" src="/images/{{ $user->photo ? $user->photo->file : 'no photo for this user'}}" alt="photo"></td>
 
-            <td>{{ $user->name }}</td>
+        <td><a href="{{route('admin.users.edit', $user->id)}}">{{ $user->name }}</a></td>
             
             <td>{{ $user->email }}</td>
 
