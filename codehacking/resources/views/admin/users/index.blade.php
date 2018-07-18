@@ -8,6 +8,7 @@
   <thead>
     <tr>
       <th>ID</th>
+      <th>Photo</th>
       <th>Name</th> 
       <th>Email</th>
       <th>Role</th>
@@ -25,8 +26,10 @@
         <tr>
             <td>{{ $user->id }}</td>
 
-            <td>{{ $user->name }}</td>
+            <td><img height="50px" width="50px" src="/images/{{ $user->photo ? $user->photo->file : 'no photo for this user'}}" alt="photo"></td>
 
+            <td>{{ $user->name }}</td>
+            
             <td>{{ $user->email }}</td>
 
             <td>{{ $user->role->name }}</td>
