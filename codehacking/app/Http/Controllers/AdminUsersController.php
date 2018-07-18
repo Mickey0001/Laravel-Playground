@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\User;
 
+use App\Role;
+
 class AdminUsersController extends Controller
 {
     /**
@@ -27,6 +29,8 @@ class AdminUsersController extends Controller
      */
     public function create()
     {
+        $roles = Role::lists();
+
         return view('admin.users.create');
     }
 
