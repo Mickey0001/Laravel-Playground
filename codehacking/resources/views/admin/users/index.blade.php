@@ -26,7 +26,8 @@
         <tr>
             <td>{{ $user->id }}</td>
 
-            <td><img height="50px" width="50px" src="/images/{{ $user->photo ? $user->photo->file : 'no photo for this user'}}" alt="photo"></td>
+            <td><img src="/images/{{$user->photo ? $user->photo->file : 'http://via.placeholder.com/100x100'}}" alt="photo" class="img-responsive img-circle"></td>
+            
 
         <td><a href="{{route('admin.users.edit', $user->id)}}">{{ $user->name }}</a></td>
             
