@@ -21,9 +21,14 @@ class Admin
         if(Auth::check())
         {
             if(Auth::user()->isAdmin)
+            {
+
+                return $next($request);
+            }
             
         }
 
-        return $next($request);
+        return redirect(404);
+
     }
 }
