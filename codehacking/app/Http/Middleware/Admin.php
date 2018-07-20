@@ -20,7 +20,7 @@ class Admin
     {
         if(Auth::check())
         {
-            if(Auth::user()->isAdmin)
+            if(Auth::user()->isAdmin())
             {
 
                 return $next($request);
@@ -28,7 +28,7 @@ class Admin
             
         }
 
-        return redirect(404);
+        return redirect('/');
 
     }
 }
