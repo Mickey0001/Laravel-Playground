@@ -162,6 +162,10 @@ class AdminUsersController extends Controller
      */
     public function destroy($id)
     {
-        
+        User::findOrFail($id)->delete();
+
+        Session::flash('deleted_user', 'The user has been deleted.');
+
+        redirect('admin/users');
     }
 }
