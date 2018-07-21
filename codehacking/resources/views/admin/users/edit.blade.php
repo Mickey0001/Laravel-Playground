@@ -48,6 +48,8 @@
     
     
       {!! Form::close() !!}
+
+      
     
       @include('errors.error')
       
