@@ -4,6 +4,8 @@
 
   <h1>New Post</h1>
 
+  <div class="row">
+
   {!! Form::open(['method'=>'POST', 'action'=>'AdminPostsController@store']) !!}
 
       <div class="form-group">
@@ -17,8 +19,8 @@
       </div>
 
       <div class="form-group">
-        {!! Form::label('title','Title:') !!}
-        {!! Form::file('title', ['class'=>'form-control']) !!}
+        {!! Form::label('photo_id','Photo:') !!}
+        {!! Form::file('photo_id',null,  ['class'=>'form-control']) !!}
       </div>
 
       <div class="form-group">
@@ -31,5 +33,11 @@
       </div>
 
 {!! Form::close() !!}
+
+</div>
+
+<div class="row">
+  @include('includes.form_error')
+</div>
 
 @endsection
