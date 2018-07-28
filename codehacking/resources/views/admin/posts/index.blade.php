@@ -24,7 +24,6 @@
           <th>{{$post->category_id}}</th>
           <th>{{$post->photo_id}}</th>
           <th>{{$post->title}}</th> 
-          <th>{{$post->body}}</th> 
           <th>{{$post->created_at->diffForHumans()}}</th> 
           <th>{{$post->updated_at->diffForHumans()}}</th> 
         </tr>
